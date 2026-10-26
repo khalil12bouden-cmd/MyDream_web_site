@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080817">
+    <meta
+        name="description"
+        content="My Dream : smartphones, ordinateurs gaming, composants PC, périphériques et offres high-tech en Tunisie."
+    >
+
+    <title>My Dream — Votre univers High-Tech</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+    <!-- =====================================================
+         HEADER: logo, search, contact details and navigation
+    ====================================================== -->
+    <header class="site-header" id="top">
+        <div class="topbar wrap">
+            <!-- Website logo -->
+            <a class="logo" href="#top" aria-label="My Dream — accueil">
+                <span>my</span>
+                <strong>dream</strong>
+            </a>
+
+            <!-- Search bar (visual demo only) -->
+            <form
+                class="search"
+                role="search"
+                onsubmit="event.preventDefault(); alert('La recherche sera bientôt disponible.');"
+            >
+                <input
+                    type="search"
+                    name="q"
+                    aria-label="Rechercher un produit"
+                    placeholder="Rechercher un produit, une marque..."
+                >
+                <button type="submit" aria-label="Lancer la recherche">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+            </form>
+
+            <!-- Store location -->
+            <div class="top-info location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div>
+                    <b>Tunis, Tunisie</b>
+                    <small>Livraison partout en Tunisie</small>
+                </div>
+            </div>
+
+            <!-- Customer service phone number -->
+            <a class="top-info" href="tel:28390083" aria-label="Appeler le service client">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div>
+                    <b>28 390 083</b>
+                    <small>Service client</small>
+                </div>
+            </a>
+
+            <!-- Account link -->
+            <a class="top-info account" href="#footer">
+                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                <div>
+                    <b>Mon compte</b>
+                    <small>Connexion / Inscription</small>
+                </div>
+            </a>
+
+            <!-- Shopping cart (demo only) -->
+            <a class="cart" href="#categories" aria-label="Panier, 0 article">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <span>0</span>
+                <small>Panier</small>
+            </a>
+        </div>
+
+        <!-- Main category navigation -->
+        <nav class="nav wrap" aria-label="Navigation principale">
+            <a class="all-cats" href="#categories">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <span>Toutes les catégories</span>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </a>
+
+            <a href="#gaming">
+                <i class="fa-solid fa-desktop" aria-hidden="true"></i>
+                <span>Ordinateurs &amp; Gaming</span>
+            </a>
+            <a href="#pc-components">
+                <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                <span>Composants PC</span>
+            </a>
+            <a href="#peripherals">
+                <i class="fa-solid fa-headphones" aria-hidden="true"></i>
+                <span>Périphériques</span>
+            </a>
+            <a href="#smartphones">
+                <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+                <span>Téléphonie</span>
+            </a>
+            <a href="#tv-image">
+                <i class="fa-solid fa-tv" aria-hidden="true"></i>
+                <span>TV &amp; Image</span>
+            </a>
+            <a href="#home-appliances">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <span>Maison &amp; Électroménager</span>
+            </a>
+            <a href="#promotions">
+                <i class="fa-solid fa-tag" aria-hidden="true"></i>
+                <span>Promotions</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT: promotional banners and product categories
+    ====================================================== -->
+    <main class="wrap main-content">
+        <!-- Samsung promotional banner -->
+        <section aria-label="Offre Samsung">
+            <a
+                class="hero-image"
+                href="#categories"
+                aria-label="Découvrir l'offre Samsung Galaxy"
+            >
+                <img
+                    src="assets/samsung-hero.jpg"
+                    alt="Offre Samsung Galaxy avec smartphone, tablette et écouteurs"
+                    fetchpriority="high"
+                >
+            </a>
+        </section>
+
+        <!-- Gaming promotional banner -->
+        <section id="gaming" aria-label="Offres ordinateurs gaming">
+            <a
+                class="gaming-image"
+                href="#categories"
+                aria-label="Découvrir les ordinateurs gaming"
+            >
+                <img
+                    src="assets/gaming-banner.jpg"
+                    alt="Bannière Desktop Gaming avec ordinateurs RGB et remise jusqu'à 20 pour cent"
+                    loading="lazy"
+                >
+            </a>
+        </section>
+
+        <!-- Product category cards -->
+        <section id="categories" class="categories-section">
+            <div class="section-heading">
+                <div>
+                    <h1>Nos catégories</h1>
+                    <p>Tout ce dont vous avez besoin, au même endroit</p>
+                </div>
+                <a href="#categories">
+                    Voir toutes les catégories
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="category-grid">
+                <a class="category-card" href="#gaming" id="category-gaming">
+                    <img
+                        src="assets/gaming-laptop.jpg"
+                        alt="Ordinateur portable gaming"
+                        loading="lazy"
+                    >
+                    <span>Ordinateurs &amp; Gaming</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+                <a class="category-card" href="#pc-components" id="pc-components">
+                    <img
+                        src="assets/pc-components.jpg"
+                        alt="Cartes graphiques et composants PC"
+                        loading="lazy"
+                    >
+                    <span>Composants PC</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+                <a class="category-card" href="#peripherals" id="peripherals">
+                    <img
+                        src="assets/peripherals.jpg"
+                        alt="Clavier, casque et souris gaming"
+                        loading="lazy"
+                    >
+                    <span>Périphériques</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+                <a class="category-card" href="#smartphones" id="smartphones">
+                    <img
+                        src="assets/smartphones.jpg"
+                        alt="Sélection de smartphones"
+                        loading="lazy"
+                    >
+                    <span>Téléphonie</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+                <a class="category-card" href="#tv-image" id="tv-image">
+                    <img
+                        src="assets/tv-image.jpg"
+                        alt="Téléviseur et image"
+                        loading="lazy"
+                    >
+                    <span>TV &amp; Image</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+                <a class="category-card" href="#home-appliances" id="home-appliances">
+                    <img
+                        src="assets/home-appliances.jpg"
+                        alt="Appareils électroménagers"
+                        loading="lazy"
+                    >
+                    <span>Maison &amp; Électroménager</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+                <a class="category-card promo-card" href="#promotions" id="promotions">
+                    <div class="promo-art" aria-hidden="true">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <span>Promotions</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating customer support shortcut -->
+    <a class="help-pill" href="tel:28390083" aria-label="Contacter le service client">
+        <i class="fa-solid fa-headset" aria-hidden="true"></i>
+        <span>
+            <b>Besoin d'aide ?</b>
+            <small>Nous sommes là !</small>
+        </span>
+    </a>
+
+    <!-- =====================================================
+         FOOTER: useful links, social media and copyright
+    ====================================================== -->
+    <footer id="footer">
+        <div class="footer-inner wrap">
+            <!-- Footer logo -->
+            <div class="footer-brand">
+                <a class="logo" href="#top" aria-label="My Dream — retour en haut">
+                    <span>my</span>
+                    <strong>dream</strong>
+                </a>
+                <p>Votre univers High-Tech</p>
+            </div>
+
+            <!-- About links -->
+            <div class="footer-column">
+                <h2>À propos de nous</h2>
+                <a href="#footer">Qui sommes-nous</a>
+                <a href="#categories">Nos offres</a>
+                <a href="tel:28390083">Contact</a>
+            </div>
+
+            <!-- Customer service links -->
+            <div class="footer-column">
+                <h2>Service client</h2>
+                <a href="#footer">Aide &amp; FAQ</a>
+                <a href="#footer">Livraison</a>
+                <a href="#footer">Retours &amp; Échanges</a>
+            </div>
+
+            <!-- Legal links -->
+            <div class="footer-column">
+                <h2>Informations</h2>
+                <a href="#footer">Mentions légales</a>
+                <a href="#footer">Politique de confidentialité</a>
+                <a href="#footer">Conditions générales</a>
+            </div>
+
+            <!-- Social media links -->
+            <div class="footer-column">
+                <h2>Suivez-nous</h2>
+                <div class="socials">
+                    <a href="#footer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#footer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#footer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                    </a>
+                    <a href="#footer" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    </a>
+                    <a href="#footer" aria-label="X">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright strip -->
+        <div class="footer-bottom">
+            <div class="wrap">
+                <span>© 2026 My Dream. Tous droits réservés.</span>
+                <span>My Dream — Plus qu'un magasin, c'est votre rêve.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
