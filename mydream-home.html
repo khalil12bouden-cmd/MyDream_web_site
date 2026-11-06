@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Dream – Accueil</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:#070716;color:#fff;font-family:'Poppins',system-ui,sans-serif}
+a{color:#c4b5fd;text-decoration:none}a:hover{color:#f0abfc}
+button{font-family:inherit;cursor:pointer}
+input::placeholder{color:#8a86a8}
+.page{min-height:100vh;background:radial-gradient(circle at 20% 0%,#1a1050 0%,#0b0a24 38%,#070716 100%);display:flex;flex-direction:column}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;padding:16px 48px;border-bottom:1px solid rgba(124,58,237,.3)}
+.logo{display:flex;flex-direction:column;line-height:.82;color:#fff;text-shadow:0 0 14px rgba(192,132,252,.95),0 0 30px rgba(168,85,247,.7);font-family:'Comfortaa',sans-serif;font-weight:700}
+.logo span:first-child{font-size:30px;margin-left:4px}.logo span:last-child{font-size:46px;margin-top:-4px}
+form{flex:1 1 300px;max-width:520px;display:flex;align-items:center;background:#fff;border:2px solid #8b5cf6;border-radius:999px;padding:4px 4px 4px 20px;box-shadow:0 0 18px rgba(139,92,246,.55)}
+form input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:14px;color:#1b1b30;padding:8px 0}
+form button{width:42px;height:42px;border-radius:50%;border:0;background:#7c3aed;display:flex;align-items:center;justify-content:center}
+.right{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-left:auto}
+.it{display:flex;align-items:center;gap:10px;line-height:1.35;color:#fff}
+.it b{display:block;font-size:13px;font-weight:600}.it small{display:block;font-size:11px;color:#b8b4d6}
+.ph{width:40px;height:40px;border-radius:50%;border:2px solid #8b5cf6;display:flex;align-items:center;justify-content:center;box-shadow:0 0 12px rgba(139,92,246,.6)}
+.cart{position:relative;display:flex;align-items:center;gap:8px}
+.cart i{position:absolute;top:-8px;left:18px;min-width:20px;height:20px;border-radius:10px;background:#7c3aed;font:700 11px 'Poppins';display:flex;align-items:center;justify-content:center;font-style:normal}
+nav{background:linear-gradient(90deg,#1a1259,#150f45);border-bottom:1px solid rgba(124,58,237,.35);padding:10px 48px;display:flex;align-items:center;gap:30px;overflow-x:auto}
+nav a{flex:none;font-size:14px;color:#e4e0ff;transition:color .15s}nav a:hover{color:#f0abfc}
+nav a.on{color:#fff;font-weight:600;border-bottom:2px solid #d946ef;padding-bottom:3px}
+.cats{flex:none;display:flex;align-items:center;gap:12px;background:#6d28f0;color:#fff;border:0;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:600;box-shadow:0 0 16px rgba(109,40,240,.6)}
+main{flex:1;padding:32px 48px 48px;display:flex;flex-direction:column;gap:24px}
+.title{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.title .bar{width:40px;height:3px;background:#d946ef;border-radius:2px;margin-top:14px;box-shadow:0 0 10px #d946ef}
+.title h1{font-size:28px;font-weight:600;line-height:1.2}.title p{font-size:13px;color:#b8b4d6;margin-top:4px}
+.help{margin-left:auto;display:flex;align-items:center;gap:12px;background:linear-gradient(90deg,#6d28f0,#a21caf);border-radius:999px;padding:10px 20px;box-shadow:0 0 18px rgba(139,92,246,.55);line-height:1.25}
+.help b{display:block;font-size:13px;font-weight:600}.help small{display:block;font-size:10.5px;color:#f1e8ff}
+.panel{background:linear-gradient(180deg,#17163a,#101030);border:1px solid rgba(168,85,247,.4);border-radius:16px;overflow:hidden}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;min-height:320px;background:radial-gradient(circle at 80% 60%,rgba(124,58,237,.55),rgba(20,16,60,.2) 70%),linear-gradient(180deg,#17163a,#101030)}
+.hero .t{padding:36px 40px}
+.pill{display:inline-block;background:rgba(109,40,240,.9);border-radius:999px;padding:3px 12px;font-size:11px;font-weight:700;letter-spacing:.04em}
+.hero h2{font-size:30px;font-weight:600;line-height:1.3;margin:14px 0 10px}
+.hero h2 em{font-style:normal;color:#f0abfc;text-shadow:0 0 12px rgba(217,70,239,.5)}
+.hero p{font-size:13px;line-height:1.7;color:#b8b4d6}.hero p b{color:#fff;font-weight:600}
+.note{font-size:11.5px;color:#b8b4d6;margin-top:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:#6d28f0;color:#fff;border:0;border-radius:999px;padding:10px 20px;font-size:12.5px;font-weight:600;min-height:44px;box-shadow:0 0 14px rgba(109,40,240,.55)}
+.btn:hover{filter:brightness(1.2);color:#fff}
+.dev{display:flex;justify-content:center;align-items:flex-end;gap:16px;padding:24px}
+.dev span{display:block;border:3px solid #6b6b8f;background:linear-gradient(135deg,#4f46e5,#9333ea 55%,#ec4899);box-shadow:0 0 24px rgba(168,85,247,.4)}
+.dev span:nth-child(1){width:84px;height:180px;border-radius:14px}.dev span:nth-child(2){width:84px;height:205px;border-radius:14px}.dev span:nth-child(3){width:170px;height:120px;border-radius:10px}
+.promo{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 40px;background:radial-gradient(circle at 80% 50%,rgba(217,70,239,.35),rgba(20,16,60,.2) 60%),linear-gradient(180deg,#17163a,#101030)}
+.promo h2{font-size:30px;font-weight:700}.promo .off{text-align:right;font-size:52px;font-weight:700;color:#f0abfc;text-shadow:0 0 18px rgba(217,70,239,.6);line-height:1}.promo .off small{display:block;font-size:13px;color:#b8b4d6;font-weight:500;text-shadow:none}
+h3{font-size:20px;font-weight:600;display:flex;align-items:center;gap:14px}h3:before{content:"";width:40px;height:3px;background:#d946ef;border-radius:2px;box-shadow:0 0 10px #d946ef}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+.card{display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s,border-color .2s;color:#fff}
+.card:hover{box-shadow:0 0 28px rgba(168,85,247,.45);border-color:#a855f7;transform:translateY(-3px);color:#fff}
+.card .img{position:relative;height:170px;background:radial-gradient(circle at 50% 60%,rgba(124,58,237,.55),rgba(20,16,60,.2) 70%);display:flex;align-items:center;justify-content:center}
+.card .pill{position:absolute;top:12px;left:12px}
+.card .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h4{font-size:13.5px;font-weight:600;line-height:1.4}.card p{font-size:11.5px;line-height:1.5;color:#b8b4d6}
+.card .btn{align-self:flex-start;margin-top:auto}
+footer{background:#080819;border-top:1px solid rgba(124,58,237,.3);padding:32px 48px 20px}
+.fr{display:flex;flex-wrap:wrap;gap:32px 56px;align-items:flex-start}
+.fc{display:flex;flex-direction:column;gap:8px;font-size:12px}.fc b{font-size:13px;font-weight:600}
+.soc{display:flex;gap:10px}.soc a{width:36px;height:36px;border-radius:8px;border:1px solid rgba(168,85,247,.6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px}
+.pay{display:flex;gap:8px}.pay span{background:#fff;color:#1b1b30;font-weight:700;font-size:12px;border-radius:6px;padding:6px 12px}
+.copy{margin-top:24px;padding-top:16px;border-top:1px solid rgba(124,58,237,.25);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:11.5px;color:#b8b4d6}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f0abfc;outline-offset:2px}
+@media(max-width:800px){header,nav,main,footer{padding-left:20px;padding-right:20px}.hero{grid-template-columns:1fr}.hero .t{padding:28px 24px 0}.right{margin-left:0}}
+</style></head>
+<body><div class="page">
+<header>
+  <a class="logo" href="#" aria-label="My Dream, accueil"><span>my</span><span>dream</span></a>
+  <form onsubmit="return false"><input type="text" aria-label="Rechercher" placeholder="Rechercher un produit, une marque..."><button type="button" aria-label="Rechercher"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></form>
+  <div class="right">
+    <div class="it"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Tunis, Tunisie</b><small>Livraison partout en Tunisie</small></div></div>
+    <div class="it"><div class="ph"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></div><div><b>28 390 083</b><small>Service client</small></div></div>
+    <a class="it" href="#"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg><div><b>Mon compte</b><small>Connexion / Inscription</small></div></a>
+    <div class="cart" aria-label="Panier"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2.2 10.5h9.6L19.5 7H6.5"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg><i>0</i><small style="font-size:11px;color:#b8b4d6;margin-top:10px">Panier</small></div>
+  </div>
+</header>
+<nav aria-label="Catégories">
+  <button class="cats" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>Toutes les catégories<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <a class="on" href="#">Ordinateurs &amp; Gaming</a><a href="#">Composants PC</a><a href="#">Périphériques</a><a href="#">Téléphonie</a><a href="#">TV &amp; Image</a><a href="#">Maison &amp; Électroménager</a><a href="#">Promotions</a>
+</nav>
+<main>
+  <div class="title"><div class="bar"></div><div><h1>Bienvenue chez My Dream</h1><p>Votre univers High-Tech</p></div>
+    <a class="help" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/></svg><span><b>Besoin d'aide ?</b><small>Nous sommes là !</small></span></a></div>
+
+  <section class="panel hero">
+    <div class="t"><span class="pill">SAMSUNG</span>
+      <h2>Pack مبروك الـ<br><em>Des cadeaux offerts</em></h2>
+      <p><b>Galaxy S26 Ultra :</b> 3 cadeaux – chargeur 60W, tablette A11 LTE (4/64) et Buds Core<br><b>Galaxy S26 :</b> 2 cadeaux – chargeur 60W, tablette A11 LTE (4/64)</p>
+      <div class="note">*Offre valable jusqu’au 13 juillet 2026</div>
+      <a class="btn" href="#">Découvrir</a></div>
+    <div class="dev"><span></span><span></span><span></span></div>
+  </section>
+
+  <section class="panel promo">
+    <div><span class="pill">GAMING</span><h2 style="margin-top:10px">Desktop Gaming</h2><a class="btn" href="#">Découvrir</a></div>
+    <div class="off"><small>Jusqu’à</small>-20%</div>
+  </section>
+
+  <h3>Nos univers</h3>
+  <div class="grid">
+    <a class="panel card" href="#"><div class="img"><span class="pill">GAMING</span><svg width="170" height="116" viewBox="0 0 170 116"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f46e5"/><stop offset=".55" stop-color="#9333ea"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs><rect x="26" y="8" width="118" height="76" rx="6" fill="#0d0d22" stroke="#6b6b8f" stroke-width="2"/><rect x="31" y="13" width="108" height="66" rx="3" fill="url(#g)"/><path d="M10 92h150l-8 12a6 6 0 01-5 3H23a6 6 0 01-5-3z" fill="#2a2a4a" stroke="#6b6b8f" stroke-width="2"/></svg></div><div class="b"><h4>Ordinateurs &amp; Gaming</h4><p>PC portables, desktops et accessoires gamer.</p><span class="btn">Découvrir</span></div></a>
+    <a class="panel card" href="#"><div class="img"><span class="pill">PC</span><svg width="170" height="116" viewBox="0 0 170 116"><rect x="55" y="8" width="60" height="100" rx="8" fill="#0d0d22" stroke="#6b6b8f" stroke-width="2"/><rect x="62" y="16" width="46" height="46" rx="4" fill="url(#g)"/><circle cx="85" cy="85" r="10" fill="none" stroke="#a855f7" stroke-width="3"/></svg></div><div class="b"><h4>Composants PC</h4><p>Tout pour monter ou améliorer votre machine.</p><span class="btn">Découvrir</span></div></a>
+    <a class="panel card" href="#"><div class="img"><span class="pill">SAMSUNG</span><svg width="170" height="116" viewBox="0 0 170 116"><rect x="62" y="6" width="46" height="104" rx="9" fill="#0d0d22" stroke="#6b6b8f" stroke-width="2"/><rect x="67" y="14" width="36" height="88" rx="4" fill="url(#g)"/></svg></div><div class="b"><h4>Téléphonie</h4><p>Galaxy S26 et S26 Ultra avec cadeaux offerts.</p><span class="btn">Découvrir</span></div></a>
+    <a class="panel card" href="#"><div class="img"><span class="pill">MAISON</span><svg width="170" height="116" viewBox="0 0 170 116"><rect x="20" y="30" width="130" height="40" rx="8" fill="#0d0d22" stroke="#6b6b8f" stroke-width="2"/><rect x="28" y="56" width="114" height="6" rx="3" fill="url(#g)"/><path d="M40 80l-6 20M85 80v22M130 80l6 20" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/></svg></div><div class="b"><h4>Maison &amp; Électroménager</h4><p>Climatisation et équipements pour la maison.</p><span class="btn">Découvrir</span></div></a>
+  </div>
+</main>
+<footer>
+  <div class="fr">
+    <div class="fc"><div class="logo"><span style="font-size:24px;margin-left:3px">my</span><span style="font-size:36px;margin-top:-3px">dream</span></div><span style="color:#b8b4d6">Votre univers High-Tech</span></div>
+    <div class="fc"><b>À propos de nous</b><a href="#">Qui sommes-nous</a><a href="#">Nos offres</a><a href="#">Contact</a></div>
+    <div class="fc"><b>Service client</b><a href="#">Aide &amp; FAQ</a><a href="#">Livraison</a><a href="#">Retours &amp; Échanges</a></div>
+    <div class="fc"><b>Informations</b><a href="#">Mentions légales</a><a href="#">Politique de confidentialité</a><a href="#">Conditions générales</a></div>
+    <div class="fc"><b>Suivez-nous</b><div class="soc"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="TikTok">♪</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="X">✕</a></div></div>
+    <div class="fc" style="margin-left:auto"><span style="font-size:11px;color:#b8b4d6">Paiement sécurisé</span><div class="pay"><span style="color:#1a1f71">VISA</span><span>Mastercard</span><span>e-DINAR</span></div></div>
+  </div>
+  <div class="copy"><span>© 2025 My Dream. Tous droits réservés.</span><span>My Dream — Plus qu'un magasin, c'est votre rêve.</span></div>
+</footer>
+</div></body></html>
